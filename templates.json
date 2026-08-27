@@ -1,0 +1,23 @@
+{
+  "prompt_templates": [
+    {
+      "id": 1,
+      "name": "Text Summarization with Constraints",
+      "template": "Summarize the following text into {{word_limit}} words or less. Tone should be {{tone}}.\n\nText: {{source_text}}",
+      "sample_variable": {
+        "word_limit": "50",
+        "name": "Summary Task",
+        "tone": "professional",
+        "source_text": "Large Language Models require careful evaluation, safety alignment, and structured prompting to ensure high-quality and reliable outputs in production environments."
+      }
+    },
+    {
+      "id": 2,
+      "name": "Few-Shot Sentiment Analysis",
+      "template": "Classify the sentiment of the given review as Positive, Neutral, or Negative.\n\nExample 1: 'The service was incredible!' -> Positive\nExample 2: 'It was okay, nothing special.' -> Neutral\nExample 3: 'Terrible experience, waste of money.' -> Negative\n\nTarget Review: '{{review_text}}'\nSentiment:",
+      "sample_variable": {
+        "review_text": "The tool exceeded my expectations and made data evaluation effortless."
+      }
+    }
+  ]
+}
