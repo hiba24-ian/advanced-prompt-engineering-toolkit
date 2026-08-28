@@ -2,7 +2,7 @@ import json
 
 def load_templates(file_path):
     """Load prompt templates and few-shot examples from a JSON file."""
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r') as f:
         return json.load(f)
 
 def format_prompt(template, variables):
