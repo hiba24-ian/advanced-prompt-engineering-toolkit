@@ -9,7 +9,7 @@ def format_prompt(template, variables):
     """Format prompt template with dynamic variables."""
     formatted_text = template
     for key, value in variables.items():
-        placeholder = f"{{{{{key}}}}}"
+placeholder = "{{" + key + "}}"        
         formatted_text = formatted_text.replace(placeholder, str(value))
     return formatted_text
 
