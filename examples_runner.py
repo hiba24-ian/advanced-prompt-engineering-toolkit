@@ -17,7 +17,7 @@ if __name__ == "__main__":
     data = load_templates("templates.json")
     templates = data.get("prompt_templates", [])
     
-    print(f"Loaded {len(templates)} advanced prompt templates.\n")
+    print("Loaded " + str(len(templates)) + " advanced prompt templates.\n")
     
     for t in templates:
         template_id = t["id"]
@@ -25,10 +25,10 @@ if __name__ == "__main__":
         raw_template = t["template"]
         example_input = t.get("sample_variable", {})
         
-        print(f"Template ID: {template_id} - {name}")
+        print("Template ID: " + str(template_id) + " - " + name)
         if example_input:
             formatted = format_prompt(raw_template, example_input)
-            print(f"Formatted Output:\n{formatted}")
+            print("Formatted Output:\n" + formatted)
         else:
-            print(f"Template:\n{raw_template}")
+            print("Template:\n" + raw_template)
         print("-" * 50)
